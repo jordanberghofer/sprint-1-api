@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  computer: one
+  employee: one
+  start: 2017-10-20
+  end: 2017-10-20
+
+two:
+  computer: two
+  employee: two
+  start: 2017-10-20
+  end: 2017-10-20
