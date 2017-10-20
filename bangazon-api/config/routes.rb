@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employee_programs
   resources :employees
   resources :employee_types
   resources :training_programs
