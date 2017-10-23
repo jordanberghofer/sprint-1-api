@@ -1,3 +1,5 @@
+# require 'pry'
+
 class TrainingProgramsController < ApplicationController
   before_action :set_training_program, only: [:show, :update, :destroy]
 
@@ -35,15 +37,11 @@ class TrainingProgramsController < ApplicationController
 
   # DELETE /training_programs/1
   def destroy
-    # def try_pry
-    #   pry(try_pry)> puts
-    #   @training_program.destroy
-    # end
-    # if @training_program.start_date > Date.now
-    
-    # else
-    #   puts "Cannot delete information. Start date is not in the future."
-    # end
+    if @training_program.start_date <= DateTime.now.to_date
+      @training_program.destroy
+    else
+      render html: "<script>alert('Program must be in the past to delete.')</script>"
+    end
   end
 
   private
