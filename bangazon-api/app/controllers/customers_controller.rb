@@ -1,11 +1,33 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :update, :destroy]
 
+  notice =  "This is my alert"
   # GET /customers
   def index
     @customers = Customer.all
+    # @active_customers = Customer.all(:active)
+    #   if @active_customers == Customer.all(false)
+    #     puts "Hey! You got this to work!!!"
+    #   end
+    # render json: @customers
 
-    render json: @customers
+    if params['active'] == 'false'
+
+      @false_customers = Customer.where(active: false)
+      render json: @false_customers
+
+    elsif params['active'] == 'true'
+      @true_customers = Customer.where(active: true)
+      render json: @true_customers
+    else
+      render json: @customers
+    end
+
+      # Person.where("administrator = 1").order("created_on DESC").find(1)
+  
+
+
+    
   end
 
   # GET /customers/1

@@ -35,7 +35,15 @@ class TrainingProgramsController < ApplicationController
 
   # DELETE /training_programs/1
   def destroy
-    @training_program.destroy
+    # def try_pry
+    #   pry(try_pry)> puts
+    #   @training_program.destroy
+    # end
+    # if @training_program.start_date > Date.now
+    
+    # else
+    #   puts "Cannot delete information. Start date is not in the future."
+    # end
   end
 
   private
