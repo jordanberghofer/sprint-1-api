@@ -14,12 +14,12 @@ To run this api, you will need to install three gems: ```gem 'rails', '~> 5.1.4'
 ### Installing
 
 How to run the api:
-1.git clone the repo.
-1.run bundle install.
-1.rails db:migrate.
-1.rails server.
-1.go to schema.rb and find path to add dummy data (this should be appended to the localhost url - ex: localhost:3000/orders).
-1.at this point you are on your own.
+1. ```Git clone``` the repo.
+1. ```CD``` into the newly cloned directory.
+1. Run ```bundle install```.
+1. Run ```rails db:migrate```.
+1. Run ```rails server```.
+1. Go to schema.rb and find path to add dummy data (this should be appended to the localhost url - ex: localhost:3000/orders).
 
 
 ## Authors
