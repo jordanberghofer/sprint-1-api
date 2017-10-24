@@ -83,14 +83,12 @@ ActiveRecord::Schema.define(version: 20171020205346) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "product_id"
     t.integer "customer_id"
     t.integer "payment_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["payment_type_id"], name: "index_orders_on_payment_type_id"
-    t.index ["product_id"], name: "index_orders_on_product_id"
   end
 
   create_table "payment_types", force: :cascade do |t|
