@@ -37,7 +37,7 @@ class TrainingProgramsController < ApplicationController
 
   # DELETE /training_programs/1
   def destroy
-    if @training_program.start_date <= DateTime.now.to_date
+    if @training_program.start_date >= DateTime.now.to_date
       @training_program.destroy
     else
       render html: "<script>alert('Program must be in the past to delete.')</script>"
