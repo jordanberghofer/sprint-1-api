@@ -21,6 +21,8 @@ How to run the api:
 1. Run ```rails server```.
 1. Go to schema.rb and find path to add dummy data (this should be appended to the localhost url - ex: localhost:3000/orders).
 
+### Endpoints
+To view all endpoints, [click here!](Endpoints.md)
 
 ## Authors
 
